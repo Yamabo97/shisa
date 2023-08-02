@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+
+/* メインページの記述 */
+main {
+	background: linear-gradient(180deg, #009999 0%, #0066cc);
+}
+
+
+/* スライドショー */
+#wrapper {
+	width: 1000px;
+	margin: 0 auto;
+
+	/* width: 100%; */
+	height: auto;
+	/* width: 500px; */
+}
+
+#slide ul li img{
+	width: 100%;
+}
+
+#slide ul {
+	position: relative;
+	width: 100%;
+}
+
+#slide li {
+	position: absolute;
+	width: 100%;
+}
+
+/* スライドショー下のボタン */
+#button {
+	/* padding-top: 520px; */
+	text-align: center;
+	padding-top: 52%;
+}
+
+#button ul {
+	display: inline-block;
+}
+
+#button ul li {
+	float: left;
+	margin-right: 15px;
+}
+
+#button ul li:last-child {
+	margin-right: 0;
+}
+
+#button ul li a {
+	text-indent: -9999px;
+	text-decoration: none;
+	display: block;
+	width: 14px;
+	height: 14px;
+	border-radius: 7px;
+	background: #A8DCDB;
+}
+
+#button ul li a.target {
+	background: #41AFAD;
+}
+
+
+/* コンセプト */
+/* キャッチコピー    */
+.concept-text {
+	text-align: center;
+	font-size: 28px;
+	color: white;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+.concept-wrap {
+	padding: 20px;
+}
+
+/* 写真横のH２ */
+.concept-h2 {
+	font-size: 25px;
+	font-weight: 600;
+	text-align: center;
+	color: white;
+
+}
+
+/* 写真横の説明文 */
+.concept-p {
+	font-size: 18px;
+	color: white;
+}
+
+/* 味 */
+.aji-reverse {
+	display: flex;
+	justify-content: space-between;
+}
+
+.concept{
+	margin-bottom:30px;
+	}
+
+
+/* ニュース */
+h3{
+color: white;
+font-size: 30px;
+text-align: center;
+font-weight: 300;
+font-stretch: ultra-expanded;
+}
+
+.flex-news {
+	display: flex;
+	justify-content: space-between;
+}
+
+.newpost {
+	font-size: 15px;
+	text-align: center;
+	/* width: 300px; */
+}
+
+.date {
+	font-size: 32px;
+	text-align: center;
+}
+
+.time {
+	font-size: 15px;
+	text-align: center;
+}
+
+.news-disc {
+	font-size: 13px;
+	padding: 25px;
+}
+
+.news-a:hover {
+	opacity: 0.7;
+}
+
+
+
+.active{                            /*以下、各種animation関係のプロパティ…辞書531-539p*/
+    animation-name:fadeUp;            /*アニメーション名の呼び出し。@keyframesで付けておいた名前を使う。*/
+    animation-duration:2s;            /*アニメーションが完了するまでの時間の設定。(初期値:0s)*/
+    animation-delay:0s;               /*アニメーションが開始されるまでの時間の設定。(初期値:0s)*/
+    animation-play-state:running;     /*アニメーションの再生、停止を設定。(初期値:runnning)*/
+    animation-timing-function:ease;   /*加速曲線の設定。(初期値:ease)*/
+    animation-fill-mode:none;     /*アニメーション再生前後のスタイル適用方法の設定。(初期値:none)*/
+    animation-iteration-count:1;      /*アニメーションの繰り返し回数の設定。(初期値:1)*/
+    animation-direction:normal;       /*アニメーションの再生方向の設定。(初期値:normal)*/
+  }
+  
+
+/* フッター */
+footer {
+	background: linear-gradient(180deg, #0066cc 30%, #009999);
+	/* color: #ff3300; */
+}
+
+トップに戻るボタン------------------------- */
+
+ body{
+position: relative;
+}
+.to-top{
+    position: fixed;
+    right:50px;
+    bottom:110px;
+}
+
+.to-top .yuge{
+	display: none;
+}
+ .to-top:hover .utuwa{
+	display: none;
+ }
+
+ .to-top:hover .yuge{
+	display: block;
+ }
+
+/* レスポンシブ */
+/* スライドショー1000ｐｘ以下用 */
+@media (max-width:1000px) {
+	#wrapper {
+		width: 100%;
+		height: auto;
+	}	
+}
+
+/* タブレットサイズ */
+@media (max-width:767px) {
+
+	.flex {
+		display: block;
+	}
+
+	
+	/* コンセプト */
+	/* キャッチコピー    */
+	.concept-text {
+		font-size: 20px;
+	}
+
+	/* 写真真ん中寄せ */
+	.concept-photo {
+		width: 500px;
+		margin: 0 auto;
+	}
+
+	/* 味 */
+	/* 写真と文の上下入れ替え */
+	.aji-reverse {
+		flex-direction: column-reverse;
+	}
+
+	/* ニュース */
+	/* ３つ目を非表示 */
+	.last-news {
+		display: none;
+	}
+	/* .inner {		
+		padding: 0 ;		
+	} */
+
+}
+
+/* スマホレスポンシブ */
+@media (max-width:540px) {
+
+	/* コンセプト */
+	/* 写真のサイズ変更 */
+	.concept-photo img{
+		width: 100vw;
+		height: auto;	}
+	/* 写真の左すき間なくす */
+	.inner {		
+		padding: 0 ;		
+	}
+
+
+	/* 写真と文章の上下のすき間をなくす */
+	.concept-wrap{
+		padding-bottom:0;
+		padding-top:0;
+		
+	}
+
+	/* ニュース　
+	縦並び */
+	.flex-news {
+		display: block;
+	}
+	/* 画像真ん中揃え */	
+	.news-img{
+		text-align: center;
+	}
+
+/* 右の隙間をなくすため */
+	.concept-photo{
+		width: 100%;
+	}
+
+	/* 写真と文章の上下のすき間をなくす */
+	.news-disc{
+		padding-top:0;
+	}
+
+	
+}
