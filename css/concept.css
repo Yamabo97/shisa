@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+h2{
+font-size: 30px;
+text-align: center;
+background: linear-gradient(180deg, #009999 30%, rgb(234, 180, 78) 80%);
+}
+
+.box-wrap{
+background: linear-gradient(180deg, rgb(234, 180, 78)80%,#009999   30%);
+
+}
+
+
+/* ----------------------- */
+/* ホバー */
+.hover {
+  position: relative;
+}
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.back img {
+  /* max-width: 100%; */
+  opacity: 0.0;
+  transition: 1.5s linear;
+  width: 100vw;
+}
+.front {
+  /* max-width: 100%; */
+  transition: 0.2s linear;
+
+  width: 100vw;
+}
+/* ----------------------- */
+.hover:hover .back img {
+  opacity: 1.0;
+}
+/* .hover:hover .front {
+  opacity: 0.0;
+} */
+
+/* ここからはレイアウト */
+/* ----------------------- */
+.box-wrap {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  
+ }
+
+
+ /* 文章を非表示 */
+ .c-text{
+  display: none;
+ }
+ 
+
+
+ /* スマホレスポンシブ */
+    @media (max-width:540px) {
+
+    /* ｈ２二段に */
+    h2 span{
+    display: block;
+    }
+    }
+
+    /* テキストを表示 */
+    /* .c-text{
+      display: ;
+    } */
+    
+    h3,h4{
+      text-align: center;
+    }
+
+
+
+
