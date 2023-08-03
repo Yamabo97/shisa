@@ -1,0 +1,267 @@
+@charset "UTF-8";
+/*-------------------------------------------
+   reset CSS
+--------------------------------------------*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+figure,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+address {
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* 使いまわしのクラス指定 */
+
+.inner {
+    max-width: 1000px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* ヘッダーの記述 */
+header {
+    background: linear-gradient(180deg, #0066cc 30%, #009999);
+    color: #333;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+/* チェックボックスを消す */
+#navToggle {
+    display: none;
+}
+
+/* ロゴ、予約ボタンをフレックス */
+.h-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 予約ボタン　ホバー */
+.reserv-right:hover{
+    opacity: 0.8;
+}
+
+/* ナビ横並び */
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    font-size: 21px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-list a:hover {
+    color: orange;
+}
+
+/* ナビ内の予約ボタン消す */
+.nav-reserv {
+    display: none;
+}
+
+/* フッター */
+footer {
+    background: linear-gradient(180deg, #0066cc 30%, #009999);
+    /* color: #ff3300; */
+    padding-top: 25px;
+}
+
+/* フレックス */
+.f-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* SNS */
+/* ホバー */
+.sns a:hover{
+opacity: 0.5;
+}
+/* ツイッター */
+.twitter {
+    margin-right: 30px;
+}
+
+/* コピーライト */
+.copyright {
+    text-align: center;
+}
+
+/* トップに戻るボタン------------------------- */
+/* 位置固定 */
+.to-top{
+    position: fixed;
+    right:50px;
+    bottom:110px;
+}
+
+/* 湯気消す */
+/* .yuge{
+display: none;
+} */
+
+/* .to-top:hover .utuwa{
+opacity: 0; */
+/* transition : 2s; */
+
+/* } */
+
+/* .to-top:hover .yuge{
+display: block; */
+/* transition : 5s; */
+/* animation-duration: 1000; */
+/* } */
+
+
+/* レスポンシブ */
+@media (max-width:767px) {
+
+    /* ヘッダー */
+    .header {
+        position: relative;
+        /* メニューボタンの絶対配置の基準となる */
+    }
+
+    /* ハンバーガーボタン */
+    .btn-burger {
+        position: absolute;
+        /* 親要素（.header）を基準に絶対配置 */
+        top: 15px;
+        right: 4%;
+        z-index: 3;
+        /* ボックスの重なりの優先順位を指定。数値が大きいほど、手前（上）に配置される */
+        display: block;
+        /* ブロックレベル性質になるため、幅・高さを指定できる */
+        width: 50px;
+        height: 50px;
+        background: url("../img/btn_burger1.png") center center / 50px 50px no-repeat;
+        /* ハンバーガーボタンの画像を指定 */
+        cursor: pointer;
+        /* カーソルの形状を指定 */
+
+    }
+
+    /* メニューが開いたときの、ハンバーガーボタンの画像を指定 */
+    .nav-toggle:checked~.btn-burger {
+        background: url("../img/btn_burger2.png") center center / 40px 40px no-repeat;
+    }
+
+    /* ナビ縦並び ナビ内の予約ボタン表示 */
+    .nav-list,
+    .nav-reserv {       
+        display: block;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .nav {
+        /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+        position: fixed;
+        z-index: 2;
+        /*ナビのスタート位置と形状*/
+        left: 100%;
+        top: 0;
+        width: 100%;
+        /* height: 45vh; */
+        /*ナビの高さ*/
+        background: #4c8c81;
+
+        /*動き*/
+        transition: all 0.3s;
+        transition-duration: .5s;
+        transition-property: left;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .nav-toggle:checked~.nav {
+        left: 50%;
+    }
+
+    /* 予約ボタン　左ずらし */
+    .reserv-right {
+        padding-right: 80px;
+    }
+
+
+
+
+    /* スマホレスポンシブ */
+    @media (max-width:540px) {
+
+        
+
+        /* ロゴ　真ん中よせ */
+        h1 {
+            text-align: center;
+        }
+
+        /* ヘッダー */
+        /* ロゴ、予約ボタン縦並び */
+        .h-flex {
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 予約ボタン　右下揃え */
+        .reserv-wrap {
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        .reserv-right {
+            padding-right: 0;
+        }
+
+        /* フッター */
+        /* フレックス解除 */
+        .f-wrap {
+            display: block;
+        }
+
+
+        /* SNS真ん中揃え */
+        .sns {
+            text-align: center;
+            margin-top: 8px;
+        }
+
+
+    }
+
+}
