@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+/* 予約固有のCSS */
+
+
+/* バックグラウンド　カラー */
+main{
+    background: linear-gradient(180deg, #009999 30%, orange);
+    /* color: #ff3300; */
+}
+
+
+/* インナー９００ｐｘ */
+.reserv-inner{
+max-width: 900px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/* タイトル */
+h2{
+width: 100%;
+height: 56px;
+font-size: 18px;
+padding: 15px 30px;
+background-color: bisque;
+font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, メイリオ, "MS ゴシック", sans-serif;
+}
+
+/* 小見出し
+ */
+h3{
+font-size: 16px;
+height: 40px;
+padding: 8px 20px;
+background-color: rgb(228, 255, 196);
+}
+
+/* ご予約条件 項目 */
+h4{
+font-size: 15px;
+}
+
+/* ご予約店舗 */
+.shop{
+    font-size: 20px;
+}
+
+/* カレンダー */
+#calendar{
+    font-size: 20px;
+}
+
+/* 時間帯、人数 */
+/* セレクト　文字の大きさ */
+select{
+    font-size: 18px;
+}
+
+/* お客様情報 項目 */
+
+.custumer-tittle{
+font-size: 15px;
+font-weight:600 ;
+}
+
+/* 1行入力 共通 */
+.textbar{
+width: 330px;
+height: 48px;
+border-radius: 5px;
+font-size: 20px;
+}
+/* 名前 */
+
+
+/* 要望 */
+textarea{
+width: 100%;
+height: 120px;
+border-radius: 5px;
+font-size: 20px;
+}
+
+/* アラート文 */
+.alert{
+        font-size: 20px;
+}
+
+/* 送信ボタン */
+#submitBtn{
+width:70%;
+height: 45px;
+background-color: #ffe4c4;
+font-size: 20px;
+border-radius: 5px;
+}
+
+#submitBtn:hover{
+opacity: 0.9;
+}
+
+/* レスポンシブ */
+/* スマートフォン */
+@media(max-width:540px){
+
+    /* ご予約はこちらを非表示 */
+    .reserv-right{
+        display: none;
+    }
+
+    /* 公式の文字を非表示 */
+    h2 span{
+        display: none;
+    }
+}
