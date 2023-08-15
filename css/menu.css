@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+
+/* 写真と文を横並び */
+.m-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 写真と文を横並び */
+/* 偶数目のメニュー */
+.m-reverse {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 文章真ん中よせ */
+p {
+  text-align: center;
+  /* align-items: center; */
+}
+
+/* おしながき */
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.menu-wrap {
+  display: flex;
+  align-items: center;
+
+}
+
+.menu-t {
+
+  text-align: center;
+}
+
+/* 商品名 */
+h3 {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* 値段 */
+.m-price {
+  font-size: 18px;
+}
+
+/* 説明文 */
+.m-text {
+  font-size: 15px;
+}
+
+/* レスポンシブ */
+@media (max-width:767px) {
+
+  /* 写真と文を縦並び */
+  .m-flex {
+    display: block;
+    /* justify-content: space-between; */
+  }
+
+  /* 写真と文の上下入れ替え */
+  .m-reverse {
+  flex-direction: column-reverse;
+    /* display: block; */    
+  }
+
+/* 写真の大きさ可変 */
+  .m-img{
+  width: 100%;
+  }
+
+  /* 次の商品とすき間空ける */
+  .menu-t{
+    margin-bottom: 30px;
+  }
+
+  /* 商品名左寄せ */
+h3{
+text-align: left;
+}
+
+/* 文章左寄せ */
+  p{
+  text-align: left;
+  }
+
+}
