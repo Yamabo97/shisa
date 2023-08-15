@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="元祖 沖縄そば シーサー 沖縄の青い海を眺めながらゆっくりとこだわりの沖縄そばを楽しんで頂きたい">
+  <meta name="keywords" content="沖縄そば,シーサー,沖縄,那覇市,ラフテー,三枚肉,海">
+  <title>沖縄そば シーサー | ご予約</title>
+
+  <!-- ファビコン -->
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon-180x180.png">
+
+  <!-- 自作のcssの読み込み -->
+  <!-- 共通 -->
+  <link rel="stylesheet" href="../css/base.css">
+  <!-- 固有 -->
+  <link rel="stylesheet" href="../css/reserv.css">
+
+  <!-- jQuery本体の読み込み -->
+  <script src="../js/jquery-3.7.0.min.js"></script>
+
+  <!-- 自作のjsの読み込み -->
+  <script src="../js/reserv.js"></script>
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <!-- ナビゲーション用チェックボックス ※ブラウザ上は表示されません -->
+    <input type="checkbox" name="navToggle" id="navToggle" class="nav-toggle">
+    <!-- ナビゲーション用ハンバーガーボタン -->
+    <label for="navToggle" class="btn-burger"></label>
+
+    <div class="h-flex inner">
+      <h1><img src="../img/logo-white800.png" alt="ロゴ" width="200" height="50"></h1>
+      <div class="reserv-wrap">
+        <a class="reserv-right" href="../reserv/reserv.html"><img class="reserv-right-p" src="../img/reserv.png"
+            alt="ご予約" width="200" height="50"></a>
+      </div>
+
+    </div>
+    <!-- ナビゲーション -->
+    <nav class="nav">
+      <ul class=" inner nav-list ">
+        <li><a href="../index.html">ホーム</a></li>
+        <li><a href="../concept/concept.html">こだわり</a></li>
+        <li><a href="../menu/menu.html">メニュー</a></li>
+        <li><a href="../shopinfo/shopinfo.html">お店</a></li>
+        <li><a href="../ec/ec.html">通販</a></li>
+        <li class="current nav-reserv">ご予約</li>
+      </ul>
+    </nav>
+    <!-- ナビゲーションここまで -->
+
+  </header>
+  <!-- ヘッダーここまで -->
+
+
+
+  <main>
+    <div class="reserv-inner">
+      <form action="form.php" method="post">
+        <h2><span>【公式】</span>沖縄そば シーサー ネット予約</h2>
+
+        <!-- 予約店舗 -->
+        <h3>ご予約条件</h3>
+        <h4>ご予約店舗</h4>
+        <div>
+          <label class="shop"><input type="radio" name="shop" value="本店" checked>沖縄本店</label>
+          <label class="shop"><input type="radio" name="shop" value="稲村ケ崎店">稲村ケ崎店</label>
+        </div>
+
+        <!-- カレンダー -->
+        <h4>ご予約日時・人数</h4>
+        <input id="calendar" type="date"></input>
+
+
+        <!-- 時間帯 -->
+        <div id="selectSection">
+          <h4>時間帯</h4>
+          
+          <select class="time">
+            <option value="none">---</option>
+            <option value="モーニング">モーニング</option>
+            <option value="ランチ">ランチ</option>
+            <option value="ディナー">ディナー</option>
+          </select>
+        </div>
+
+        <!-- 人数 -->
+        <div id="selectSection2">
+          <h4>人数</h4>
+          
+          <select class="number">
+            <option value="none">---</option>
+            <option value="１人">１人</option>
+            <option value="２人">２人</option>
+            <option value="３人">３人</option>
+            <option value="４人">４人</option>
+            <option value="５人">５人</option>
+            <option value="６人">６人</option>
+          </select>
+          <p>７名以上の予約は問合せください。</p>
+
+          <h3>お客様情報</h3>
+
+          <!--名前 -->
+          <div id="name ">
+            <p class="custumer-tittle"><label for="name-text">お名前</label></p>
+            <input type="text" id="name-text" class="textbar" name="text" value="" >
+          </div>
+
+          <!-- <form action="form.php" method="post"> -->
+          <!-- テキスト -->
+          <!-- <div id="textSection">
+              <p><label for="text">Text</label></p>
+              <p class="alert">Alert : Text</p>
+              <input type="text" id="text" name="text" value="">
+            </div> -->
+
+
+          <!-- 電話番号 -->
+          <div id="tel ">
+            <p class="custumer-tittle"><label for="tel-text">電話番号</label></p>
+            <input type="tel" id="tel-text" class="textbar" name="text" value="">
+          </div>
+
+          <!-- メールアドレス -->
+          <div id="mail ">
+            <p class="custumer-tittle"><label for="mail-text">メールアドレス</label></p>
+            
+            <input type="email" id="mail-text" class="textbar" name="text" value="">
+          </div>
+
+          <!-- テキストエリア -->
+          <div id="textareaSection">
+            <p>
+              <label for="textarea">その他の要望がございましたらご記入ください</label>
+            </p>
+            <p class="alert">Alert : TextArea</p>
+            <textarea id="textarea" name="textarea"></textarea>
+          </div>
+
+          <!-- 個人情報 -->
+          <h3>個人情報保護方針</h3>
+          <p>以下をご確認頂き、ご同意の上、ご予約をお申し込みください。</p>
+          <p>・入力頂いた個人情報は、予約店舗がお客様からの予約の受付・確認・管理、及び店舗情報のご案内を行う目的に利用致します。</p>
+          <p>・お客様の個人情報の開示・訂正・削除・利用停止等につきましては、予約店舗にお問い合わせください。
+          </p>
+          <div id="checkboxSection">
+           
+            <input type="checkbox" id="checkbox1" name="checkbox" value="">
+            <label for="checkbox1">個人情報保護方針に同意しました</label>
+          </div>
+
+
+          <!-- 送信ボタン -->
+          <!-- <div class="btn"> -->
+          <input type="submit" value="予約内容を確認する" id="submitBtn">
+          <!-- </div> -->
+
+
+          <!-- アラート表示 -->
+          <p class="time-alert alert">※ 時間帯を選択してください。</p>
+          <p class="number-alert alert">※ 人数を選択してください。</p>
+          <p class="name-alert alert">※ お名前を入力してください。</p>
+          <p class="tel-alert alert">※ 電話番号を入力してください。</p>
+          <p class="mail-alert alert">※ メールアドレスを入力してください。</p>
+          <p class="check-alert alert">※ 個人情報保護方針を確認してください。</p>
+
+
+
+      </form>
+    </div>
+  </main>
+
+
+
+  <!-- フッター -->
+  <footer>
+    <div class="inner f-wrap">
+      <h1><img src="../img/logo-white800.png" alt="ロゴ" width="200" height="50"></h1>
+      <div class="sns">
+        <a href="https://twitter.com/" class="twitter"><img src="../img/twitter-logo.svg" alt="twitter" width="50"
+            height="50"></a>
+        <a href="https://www.instagram.com/"><img src="../img/Instagram-logo.png" alt="insta" width="50"
+            height="50"></a>
+      </div>
+    </div>
+
+    <!-- コピーライト -->
+    <p class="copyright">
+      <small>&copy;Copyright 2023 沖縄そば シーサー</small>
+    </p>
+  </footer>
+  <!-- フッターここまで -->
+
+
+
+</body>
