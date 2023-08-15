@@ -1,1 +1,139 @@
 
+/* EC固有の記述 */
+
+main{
+ background: linear-gradient(180deg,#009999  20%,#0066cc 50%,pink );
+    /* color: #ff3300; */
+}
+
+.ec-wrap{
+margin-bottom: 35px;
+}
+
+/* 写真エリア */
+/* サムネイル */
+
+.samne li {
+	margin-right: 10px;
+	list-style-type: none;
+	display: inline-block;	
+}
+
+.samne li a:hover {
+	transition: opacity .3s;
+	opacity: .5;
+}
+
+.samne li:last-child {
+	margin-right: 0;
+}
+
+
+/* 説明文エリア */
+.ec-t {
+	margin: 0 auto;
+}
+
+/* 品名 */
+.ec-tittle {
+	font-size: 26px;
+	font-weight: 300;
+	margin: 0 0 40px;
+}
+
+/* 値段 */
+.ec-price {
+	font-size: 30px;
+	font-weight: 900;
+	border-bottom: 1px solid;
+	margin-bottom: 15px;
+	margin-bottom: 20px;
+}
+
+.ec-price span{
+font-size: 11.2px;
+}
+
+/* 数量 */
+.ec-count-wrap{
+display: flex;
+text-align: left;
+border-bottom:1px solid ;
+padding-bottom: 20px;
+margin-bottom: 21px;
+}
+
+.ec-count{
+font-size: 14px;
+margin-right: 20px;
+vertical-align: middle;
+}
+
+/* カートへ入れるボタン */
+.ec-btn{
+font-size: 20px;
+width: 100%;
+background-color: black;
+height: 55px;
+}
+
+button:hover{
+background-color: #470000;
+}
+
+
+
+
+/* レスポンシブ */
+@media (max-width:767px){
+
+.flex{
+display: block;
+}
+
+.ec-wrap{
+margin: 0 auto;
+}
+
+/* メイン画像 */
+figure{
+text-align: center;
+}
+
+/* サムネイル */
+.samne{
+margin: 0 auto;
+width: 500px;
+}
+
+/* 説明文 */
+.ec-t{
+width: 500px;
+}
+
+.ec-btn{
+margin-bottom: 50px;
+}
+
+}
+
+
+
+
+/* メイン画像より小さいレスポンシブ */
+@media (max-width:560px){
+
+/* メイン画像 */
+.ec-main-p{
+width: 100%;
+height: auto;
+aspect-ratio: 5/3;
+}
+
+/* 説明文 */
+.ec-t{
+width: 100%;
+}
+
+
+}
