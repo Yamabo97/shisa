@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+
+
+/* バックグラウンド */
+/* 本店 */
+.o-bg{
+    background: linear-gradient(180deg, #009999 , white 96% ,#51dddd);
+    padding-bottom: 20px;
+
+   
+}
+/* 稲村ケ崎店 */
+.i-bg{
+    background: linear-gradient(180deg, #0066cc 0%, white);
+    color: #eee;
+    /* padding-top: 20px; */
+}
+
+h2{
+    text-align: center;
+    color:white ;
+}
+
+/* 写真と文横並び */
+
+.shop-inner {
+    max-width: 1000px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.shop-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* 店名 */
+caption{
+    font-size: 30px;
+}
+span{
+display: block;
+}
+
+/* 地図 */
+iframe{
+    width: 100%;
+    vertical-align: bottom;
+   }
+
+   
+
+
+   /* レスポンシブ */
+@media (max-width:767px) {
+/* 写真と文縦並び */
+    .shop-flex {
+        display: block;
+        justify-content: space-between;
+    }
+
+    .shop-p{
+        width: 100%;
+        height: auto;
+    }
+
+}
+
